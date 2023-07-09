@@ -6,8 +6,8 @@ import Link from 'next/link';
 import Menu from './Menu';
 import { IoMdHeartEmpty } from "react-icons/io";
 import { BsCart } from "react-icons/bs";
-import { BiMenuAltRight } from "react-icons/bi";
-import { VscChromeClose } from "react-icons/vsc";
+import Search from './Search';
+
 
 const Header = () => {
   const [show, setShow ] = useState("translate-y-0");
@@ -21,13 +21,16 @@ const Header = () => {
             </Link>
             <Menu showCatMenu={showCatMenu}/>
               <div className="flex items-center gap-2 text-black">
+                    <div>
+                      <Search/>
+                    </div>
                     {/* Icon start */}
                     <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
                         <IoMdHeartEmpty className="text-[19px] md:text-[24px]" />
                         
                     </div>
                     
-                    <Link href="/cart">
+                    <Link href="">
                         <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
                             <BsCart className="text-[15px] md:text-[20px]" />
                         </div>

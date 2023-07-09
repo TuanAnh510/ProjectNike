@@ -12,6 +12,7 @@ import img9 from '/public/Screenshot 2023-07-08 205913.png'
 import img10 from '/public/Shop01.jpg'
 import img11 from '/public/Shop02.jpg'
 import img12 from '/public/Shop03.jpg'
+import Cart from './Slider/Cart'
 
 
 const Banner = () => {
@@ -90,7 +91,7 @@ const Banner = () => {
 
         <div className='mt-10'>
           <div className='text-[25px]'>Always Iconic</div>
-          <div className='mt-5 text-center'>Chưa có sản phẩm</div>
+          <div className='mt-5 '><Cart/></div>
           
         </div>
 

@@ -18,11 +18,11 @@ const login = () => {
                         <form class="space-y-4 md:space-y-6" action="#">
                             <div>
                                 <label for="email" className="block mb-2 text-sm font-medium text-black">Your email</label>
-                                <input type="email" name="email" id="email" className="w-full p-2 border-2 border-[#e5e5e5]" placeholder="Email address"/>
+                                <input type="email" name="email" id="email" className="w-full rounded-lg p-2 border-2 border-[#e5e5e5]" placeholder="Email address"/>
                             </div>
                             <div>
                                 <label for="password" className="block mb-2 text-sm font-medium text-black">Password</label>
-                                <input type="password" name="password" id="password" placeholder="Password" className="w-full p-2 border-2 border-[#e5e5e5]" />
+                                <input type="password" name="password" id="password" placeholder="Password" className="w-full rounded-lg p-2 border-2 border-[#e5e5e5]" />
                             </div>
                             <div class="flex items-center justify-between">
                                 <div class="flex items-start">
