@@ -1,0 +1,20 @@
+.carouselContainer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carouselItem {
+    background-color: #f5f5f5;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textContainer {
+    text-align: center;
+}
+
+.subText {
+    font-size: 12px;
+}
