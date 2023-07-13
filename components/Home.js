@@ -15,6 +15,8 @@ import img12 from "/public/Shop03.jpg";
 import Cart from "./Slider/Cart";
 import HoverExpand from "./HoverTitle";
 import Link from "next/link";
+import CartSlider from "./Slider/CartSlider";
+import CartSliderFinner from "./Slider/CartSliderFinner";
 
 const Banner = () => {
   return (
@@ -90,6 +92,9 @@ const Banner = () => {
           </Link>
         </div>
       </div>
+      <div className="mt-10 ">
+        <CartSliderFinner />
+      </div>
 
       <div className="mt-10">
         <div className="text-[25px]">Featured</div>
@@ -149,16 +154,15 @@ const Banner = () => {
       </div>
 
       <div className="mt-10">
-        <div className="text-[25px]">Always Iconic</div>
-        <div className="mt-5 ">
-          <Cart />
+        <div>
+          <CartSlider />
         </div>
       </div>
 
       <div className="mt-10">
         <div className="text-[25px]">The Essentials</div>
         <div className="mt-10">
-          <div className="gap-10 text-center grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-1">
+          <div className="gap-10 text-center grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2">
             <div className="relative">
               <Image src={img10} alt="img" width={420} />
               <div style={{ position: "absolute", top: "80%", left: "10%" }}>

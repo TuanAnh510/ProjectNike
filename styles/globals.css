@@ -120,3 +120,44 @@
 .markdown ul li {
     margin: 10px 0;
 }
+
+/* Slide */
+.slick-slide>div {
+    margin: 0 5px;
+}
+.silder{
+    margin: 0 auto;
+    position: relative;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+.slick-slide img{
+    width: 400px;
+}
+.card {
+    /* border: 1px solid #6698ff; */
+    /* background: black; */
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+    /* color: #fff; */
+    color: black;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: none !important;
+}
+.card-finnes{
+        border-radius: 8px;
+        overflow: hidden;
+        /* height: 500px; */
+        /* color: #fff; */
+        color: black;
+        cursor: pointer;
+        z-index: 1;
+        box-shadow: none !important;
+}
+.card-finnes img{
+    width: 500px;
+}
