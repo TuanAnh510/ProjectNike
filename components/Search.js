@@ -50,7 +50,7 @@ const Search = () => {
                     </div>
                 </form>
             </div>
-            <button onClick={handleClose} className="text-[18px] mt-3 hidden lg:block">  
+            <button onClick={handleClose} className="text-[18px] hidden lg:block">  
                 Cancel
             </button>
             
@@ -58,6 +58,21 @@ const Search = () => {
         <div className="pt-10 text-[20px]">
             Popular Search Terms
         </div>
+        <div className="mt-3 text-[20px] font-semibold">
+            <div>
+                Air Force 1
+            </div>
+            <div className="mt-3">
+                Jordan
+            </div>
+            <div className="mt-3">
+                Air Max
+            </div>
+            <div className="mt-3">
+                Blazer
+            </div>
+        </div>
+      
       </Drawer>
     </>
     
