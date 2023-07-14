@@ -49,7 +49,7 @@ const Homemen = () => {
               <div className="relative">
                 <Image
                   src="/men.png"
-                  alt="img"
+                  alt="men1"
                   width={700}
                   height={0}
                   className="max-h-[657px] "
