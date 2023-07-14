@@ -13,7 +13,13 @@ const Women = ({ women }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [openTrees, setopenTrees] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
+  const [showFilter, setShowFilter] = useState(false);
+  const showText = showFilter ? "Hide" : "Show";
   const options = ["Đặc sắc", "Mới nhất", "Giá: Cao-Thấp", "Giá: Thấp-Cao"];
+
+  const handleFilterClick = () => {
+    setShowFilter(!showFilter);
+  };
 
   const loadMore = () => {
     if (visibleProducts.length >= women.length) {
@@ -38,14 +44,15 @@ const Women = ({ women }) => {
 
   //Trees
   return (
-    <div className="w-[90%] mx-auto pt-10 pb-10">
+    <div className="w-[90%] mx-auto pt-10 pb-10 -z-20">
       <div className="flex justify-between">
         <p className="text-[25px]">Women's Shoes</p>
-        <div className="flex gap-7 hidden lg:block lg:flex md:hidden">
-          <div className="flex">
-            Filter
-            <Image src={imgfilter} className="ml-1" width={20} />
-          </div>
+
+        <div className="flex gap-7 hidden lg:block lg:flex md:hidden ">
+          <button className="flex" onClick={handleFilterClick}>
+            {showText} Filter
+            <Image src={imgfilter} className="ml-2 mt-1" width={20} />
+          </button>
           <div class="relative">
             <button
               className="flex "
@@ -90,9 +97,14 @@ const Women = ({ women }) => {
           </div>
         </div>
       </div>
-
-      <div>
-        <div className="pt-10"></div>
+      <div className="mt-5 lg:hidden">
+        <button className="flex border border-[#cccccc] w-[30%] py-2 rounded-3xl justify-center h-10 ml-[70%]">
+          <p className="font-bold">Filter</p>
+          <Image src={imgfilter} className="ml-2 mt-1" width={20} />
+        </button>
+      </div>
+      <div className="flex gap-5">
+        {showFilter && <div className="pt-10">alo</div>}
         <InfiniteScroll
           dataLength={visibleProducts.length}
           next={loadMore}
