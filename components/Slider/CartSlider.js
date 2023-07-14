@@ -55,13 +55,13 @@ const CartSlider = ({ women }) => {
         <div className="text-[25px]">Always Iconic</div>
         <div className="pb-5 flex gap-5">
           <span
-            className="bg-[#e5e5e5] text-white rounded-full hover:bg-[#cccccc] w-10 h-10  cursor-pointer "
+            className="bg-[#e5e5e5] text-white rounded-full hover:bg-[#cccccc] w-10 h-10  cursor-pointer hidden lg:block md:hidden "
             onClick={gotoPrev}
           >
             <AiOutlineLeft color="black" className="mx-auto mt-3" />
           </span>
           <span
-            className="bg-[#e5e5e5] text-white rounded-full hover:bg-[#cccccc] w-10 h-10  cursor-pointer "
+            className="bg-[#e5e5e5] text-white rounded-full hover:bg-[#cccccc] w-10 h-10  cursor-pointer hidden lg:block md:hidden  "
             onClick={gotoNext}
           >
             <AiOutlineRight color="black" className="mx-auto mt-3" />
@@ -69,7 +69,7 @@ const CartSlider = ({ women }) => {
         </div>
       </div>
 
-      <div>
+      <div className="mt-10 lg:mt-0">
         <Slider {...settings} ref={sliderRef} className="card">
           <div>
             <img src="/women/1.png" alt="1" />

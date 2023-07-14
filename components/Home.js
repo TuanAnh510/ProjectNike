@@ -34,7 +34,7 @@ const Banner = () => {
         </div>
       </Link>
 
-      <div className="mt-10">
+      {/* <div className="mt-10">
         <div className="text-[25px]">The Latest</div>
         <Image
           src={img2}
@@ -53,14 +53,14 @@ const Banner = () => {
             daily—only on the Nike App.
           </div>
         </div>
-      </div>
-      <Link href="/Allproduct">
+      </div> */}
+      {/* <Link href="/Allproduct">
         <div className="text-center pt-4">
           <button className="bg-black text-white w-[100px] rounded-[20px] h-10 hover:bg-[#757575]">
             Shop
           </button>
         </div>
-      </Link>
+      </Link> */}
 
       <div className="mt-10">
         <div className="text-[25px]">Trending</div>
@@ -92,11 +92,11 @@ const Banner = () => {
           </Link>
         </div>
       </div>
-      <div className="mt-10 ">
+      <div className="mt-20 ">
         <CartSliderFinner />
       </div>
 
-      <div className="mt-10">
+      <div className="lg:mt-14">
         <div className="text-[25px]">Featured</div>
         <video
           autoPlay={true}
@@ -126,7 +126,7 @@ const Banner = () => {
         </Link>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-20">
         <div className="text-[25px]">Don't Miss</div>
         <Image
           src={img7}
@@ -153,7 +153,7 @@ const Banner = () => {
         </Link>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-20">
         <div>
           <CartSlider />
         </div>
