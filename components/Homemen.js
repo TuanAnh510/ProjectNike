@@ -15,10 +15,12 @@ const Homemen = () => {
     <div>
       {" "}
       <div className="w-[90%] max-w-[90%] mx-auto pb-10">
-        <div className="grid grid-cols-1 lg:grid-cols-3 z-20 lg:z-0  bg-white pb-5 pt-5  sticky top-0 transition-transform duration-300">
+        <div className="grid grid-cols-1 lg:grid-cols-3  lg:z-0  bg-white pb-5 pt-5  ">
           <p className="text-[25px]">Men</p>
           <div className="flex gap-5 justify-center mt-5 lg:mt-0">
-            <button>Shoes</button>
+            <Link href="/Allproduct">
+              <button>Shoes</button>
+            </Link>
             <button>Clothing</button>
             <button>Gear</button>
           </div>
