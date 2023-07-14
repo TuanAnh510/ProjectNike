@@ -48,7 +48,7 @@ const Homemen = () => {
             <div className="gap-3 text-center grid grid-cols-1 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2">
               <div className="relative">
                 <Image
-                  src="/men.png"
+                  src="/Men.png"
                   alt="men1"
                   width={700}
                   height={0}
