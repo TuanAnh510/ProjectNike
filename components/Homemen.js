@@ -161,7 +161,7 @@ const Homemen = () => {
         <div>
           <CartSport />
         </div>
-        <div className="mt-20 mx-auto text-center">
+        <div className="mt-14 mx-auto text-center">
           <HoverExpand />
         </div>
       </div>

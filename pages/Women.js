@@ -4,8 +4,8 @@ import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import InfiniteScroll from "react-infinite-scroll-component";
-
 import imgfilter from "/public/filter.png";
+import Filtermobi from "@/components/Filter/Filtermobi";
 
 const Women = ({ women }) => {
   const [hasMore, setHasMore] = useState(true);
@@ -97,12 +97,12 @@ const Women = ({ women }) => {
           </div>
         </div>
       </div>
-      <div className="mt-5 lg:hidden">
-        <button className="flex border border-[#cccccc] w-[30%] py-2 rounded-3xl justify-center h-10 ml-[70%]">
-          <p className="font-bold">Filter</p>
-          <Image src={imgfilter} className="ml-2 mt-1" width={20} />
-        </button>
+
+      {/* Mobi */}
+      <div>
+        <Filtermobi />
       </div>
+
       <div className="flex gap-5">
         {showFilter && <div className="pt-10">alo</div>}
         <InfiniteScroll

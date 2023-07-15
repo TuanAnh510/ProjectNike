@@ -73,7 +73,7 @@ const CartSport = ({ women }) => {
         <Slider
           {...settings}
           ref={sliderRef}
-          className="card-finnes mt-5 lg:mt-0 h-[300px] md:h-[400px] lg:h-[400px]"
+          className="card-finnes mt-5 lg:mt-0 h-[350px] md:h-[400px] lg:h-[400px]"
         >
           <div>
             <img src="/Men/Sport1.png" alt="1" />
