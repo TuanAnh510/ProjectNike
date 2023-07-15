@@ -1,0 +1,21 @@
+/* styles/custom.module.css */
+
+/* Thiết lập màu của checkbox khi chưa được chọn */
+.custom-checkbox-wrapper {
+    color: black;
+    /* Màu chữ hiển thị bên cạnh checkbox */
+}
+
+/* Thiết lập màu của checkbox khi được chọn */
+.custom-checkbox-checked .ant-checkbox-inner {
+    background-color: black;
+    /* Màu nền khi checkbox được chọn */
+    border-color: black;
+    /* Màu viền khi checkbox được chọn */
+}
+
+/* Thiết lập màu của tick (đánh dấu khi checkbox được chọn) */
+.custom-checkbox-checked .ant-checkbox-inner::after {
+    border-color: white;
+    /* Màu đánh dấu khi checkbox được chọn */
+}

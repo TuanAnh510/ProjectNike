@@ -6,6 +6,7 @@ import Link from "next/link";
 import InfiniteScroll from "react-infinite-scroll-component";
 import imgfilter from "/public/filter.png";
 import Filtermobi from "@/components/Filter/Filtermobi";
+import Filter from "@/components/Filter/Filter";
 
 const Women = ({ women }) => {
   const [hasMore, setHasMore] = useState(true);
@@ -53,7 +54,7 @@ const Women = ({ women }) => {
             {showText} Filter
             <Image src={imgfilter} className="ml-2 mt-1" width={20} />
           </button>
-          <div class="relative">
+          <div className="relative">
             <button
               className="flex "
               onClick={toggleDropdown}
@@ -104,7 +105,11 @@ const Women = ({ women }) => {
       </div>
 
       <div className="flex gap-5">
-        {showFilter && <div className="pt-10">alo</div>}
+        {showFilter && (
+          <div className="pt-10">
+            <Filter />
+          </div>
+        )}
         <InfiniteScroll
           dataLength={visibleProducts.length}
           next={loadMore}

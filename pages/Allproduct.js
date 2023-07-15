@@ -6,6 +6,8 @@ import Link from "next/link";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import imgfilter from "/public/filter.png";
+import Filtermobi from "@/components/Filter/Filtermobi";
+import Filter from "@/components/Filter/Filter";
 
 const Allproduct = ({ products }) => {
   const [hasMore, setHasMore] = useState(true);
@@ -14,6 +16,12 @@ const Allproduct = ({ products }) => {
   const [openTrees, setopenTrees] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
   const options = ["Đặc sắc", "Mới nhất", "Giá: Cao-Thấp", "Giá: Thấp-Cao"];
+  const [showFilter, setShowFilter] = useState(false);
+  const showText = showFilter ? "Hide" : "Show";
+
+  const handleFilterClick = () => {
+    setShowFilter(!showFilter);
+  };
 
   const loadMore = () => {
     if (visibleProducts.length >= products.length) {
@@ -41,11 +49,12 @@ const Allproduct = ({ products }) => {
     <div className="w-[90%] mx-auto pt-10 pb-10">
       <div className="flex justify-between">
         <p className="text-[20px]">All PRODUCT</p>
-        <div className="flex gap-7">
-          <div className="flex">
-            Filter
-            <Image src={imgfilter} className="ml-1" width={20} />
-          </div>
+
+        <div className="flex gap-7 hidden lg:block lg:flex md:hidden ">
+          <button className="flex" onClick={handleFilterClick}>
+            {showText} Filter
+            <Image src={imgfilter} className="ml-2 mt-1" width={20} />
+          </button>
           <div class="relative">
             <button
               className="flex "
@@ -92,7 +101,15 @@ const Allproduct = ({ products }) => {
       </div>
 
       <div>
-        <div className="pt-10"></div>
+        <Filtermobi />
+      </div>
+
+      <div className="flex gap-5">
+        {showFilter && (
+          <div className="pt-10">
+            <Filter />
+          </div>
+        )}
         <InfiniteScroll
           dataLength={visibleProducts.length}
           next={loadMore}
