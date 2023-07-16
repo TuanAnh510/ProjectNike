@@ -11,6 +11,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
 import MenuMobi from "./MenuMobi";
 import { Button, Drawer, theme } from "antd";
+import Cart from "./Cart";
 
 const Header = () => {
   const [show, setShow] = useState("translate-y-0");
@@ -41,12 +42,9 @@ const Header = () => {
           <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
             <IoMdHeartEmpty className="text-[19px] md:text-[24px]" />
           </div>
-
-          <Link href="">
-            <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
-              <BsCart className="text-[15px] md:text-[20px]" />
-            </div>
-          </Link>
+          <div>
+            <Cart />
+          </div>
 
           {/* Mobi */}
           <div>

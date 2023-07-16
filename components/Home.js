@@ -12,7 +12,7 @@ import img9 from "/public/Screenshot 2023-07-08 205913.png";
 import img10 from "/public/Shop01.jpg";
 import img11 from "/public/Shop02.jpg";
 import img12 from "/public/Shop03.jpg";
-import Cart from "./Slider/Cart";
+import Cart from "./Cart";
 import HoverExpand from "./HoverTitle";
 import Link from "next/link";
 import CartSlider from "./Slider/CartSlider";

@@ -27,8 +27,8 @@ const Homewomen = () => {
                 <button className="py-3">Shoes</button>
               </Link>
               <button>Clothing</button>
-              <button>Pants & Leggings</button>
-              <button>Sports Bras</button>
+              <button>Gear</button>
+              
             </div>
           </div>
           <div className="mt-5">
