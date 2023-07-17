@@ -1,0 +1,40 @@
+{
+  "CartslideKids": [
+    {
+      "title": "Tatum 1",
+      "img": "/Kids/sp1.png",
+      "price": 1000000
+    },
+    {
+      "title": "Air Jordan Legacy 312 Low",
+      "img": "/Kids/sp2.png",
+      "price": 2000000
+    },
+    {
+      "title": "Air Force 1",
+      "img": "/Kids/sp3.png",
+      "price": 2500000
+    },
+    {
+      "title": "Tatum 1",
+      "img": "/Kids/sp4.png",
+      "price": 1200000
+    },
+    {
+      "title": "Tatum1",
+      "img": "/Kids/sp5.png",
+      "price": 1200000
+    },
+    {
+      "title": "Nike Court Borough Low Recraft",
+      "img": "/Kids/sp6.png",
+      "price": 3000000
+    },
+    {
+      "title": "Nike Flex Runner 2",
+      "img": "/Kids/sp7.png",
+      "price": 2800000
+    }
+    
+  ]
+}

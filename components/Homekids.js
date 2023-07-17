@@ -3,27 +3,22 @@ import HoverExpand from "./HoverTitle";
 
 import Image from "next/image";
 import Link from "next/link";
-import baner from "/public/96fd84c5-0fd7-4e59-9d4d-28e66330b763.png";
+import baner from "/public/Kids/bannel.png";
 import CartSlider from "./Slider/CartSlider";
 import CartSliderFinner from "./Slider/CartSliderFinner";
 import CartSport from "./Slider/CartSport";
 
-import img6 from "/public/Screenshot 2023-07-08 193929.png";
+import img6 from "/public/Kids/Screenshot 2023-07-17 162404.png";
+import CartSliderWM from "./Slider/CartSliderWM";
+import CartSliderKids from "./Slider/CartSliderKids";
 
-const Homemen = () => {
+const Homekids = () => {
   return (
     <div>
       {" "}
       <div className="w-[90%] max-w-[90%] mx-auto pb-10">
         <div className="grid grid-cols-1 lg:grid-cols-3  lg:z-0  bg-white pb-5 pt-5  ">
-          <p className="text-[25px]">Men</p>
-          <div className="flex gap-5 justify-center mt-5 lg:mt-0">
-            <Link href="/Allproduct">
-              <button>Shoes</button>
-            </Link>
-            <button>Clothing</button>
-            <button>Gear</button>
-          </div>
+          <p className="text-[25px]">Kids</p>
         </div>
         <div className="mt-10">
           <Image src={baner} alt="baner" />
@@ -31,11 +26,14 @@ const Homemen = () => {
             <Image
               src={img6}
               alt="img"
-              className="w-[100%] mx-auto lg:w-[40%]"
+              className="w-[100%] mx-auto lg:w-[60%]"
             />
-            <div className="text-center">It’s a new dawn for football.</div>
+            <div className="text-center">
+              What better way to mark the Pegasus’ 40th anniversary than by
+              running together?
+            </div>
           </div>
-          <Link href="/Allproduct">
+          <Link href="/Kids">
             <div className="text-center pt-4">
               <button className="bg-black text-white w-[100px] rounded-[20px] h-10 hover:bg-[#757575]">
                 Shop
@@ -44,20 +42,28 @@ const Homemen = () => {
           </Link>
         </div>
 
+      
+        <div className="mt-20">
+          <CartSliderKids />
+        </div>
+
         <div className="mt-10">
-          <div className="text-[25px]">Featured</div>
+          <div className="text-[25px]">Trending</div>
           <div className="mt-10">
             <div className="gap-3 text-center grid grid-cols-1 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-2">
               <div className="relative">
                 <Image
-                  src="/Men.png"
+                  src="/Kids/bannel2.png"
                   alt="men1"
                   width={700}
                   height={0}
                   className="max-h-[657px] "
                 />
                 <div style={{ position: "absolute", top: "70%", left: "10%" }}>
-                  <p className="text-white text-[20px] "> Workout Essentials</p>
+                  <p className="text-white text-[20px] font-semibold ">
+                    {" "}
+                    Easy On & Off Shoes
+                  </p>
                 </div>
                 <div style={{ position: "absolute", top: "80%", left: "10%" }}>
                   <button className="bg-white text-black w-[200%] h-9 rounded-[20px]">
@@ -67,7 +73,7 @@ const Homemen = () => {
               </div>
               <div className="relative">
                 <Image
-                  src="/men2.png"
+                  src="/Kids/bannel3.png"
                   alt="img"
                   width={700}
                   height={0}
@@ -77,8 +83,9 @@ const Homemen = () => {
                   style={{ position: "absolute", left: "10%" }}
                   className="top-[60%] lg:top-[70%]"
                 >
-                  <p className="text-left text-white">Fresh Air</p>
-                  <p className="text-white text-xl"> Incoming Air Drop</p>
+                  <p className="text-white text-xl font-semibold">
+                    Summer Essentials
+                  </p>
                 </div>
                 <div
                   style={{ position: "absolute", left: "10%" }}
@@ -94,19 +101,24 @@ const Homemen = () => {
         </div>
 
         <div className="mt-20">
-          <CartSliderFinner />
+          <CartSliderWM />
         </div>
 
         <div className="mt-20">
-          <p className="text-[25px]">The Essentials</p>
+          <p className="text-[25px]">Sizes for All</p>
           <div className="grid grid-cols-1 lg:grid-cols-2 mt-10 gap-3">
             <div className="relative">
-              <Image src="/logomen.png" width={700} height={0} />
+              <Image
+                src="/Kids/bannel4.png"
+                width={700}
+                height={0}
+                className="h-[100%]"
+              />
               <div
                 style={{ position: "absolute", left: "10%" }}
                 className="top-[80%] lg:top-[85%]"
               >
-                <p className="text-left text-black text-2xl">Clothing</p>
+                <p className="text-left text-black text-2xl">Older Kids</p>
               </div>
               <div
                 style={{ position: "absolute", left: "10%" }}
@@ -117,14 +129,16 @@ const Homemen = () => {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col ">
               <div className="relative">
-                <Image src="/logomen2.png" width={700} height={0} />
+                <Image src="/Kids/bannel5.png" width={700} height={0} />
                 <div
                   style={{ position: "absolute", left: "10%" }}
                   className="top-[60%] lg:top-[70%]"
                 >
-                  <p className="text-left text-black text-2xl">Shoes</p>
+                  <p className="text-left text-black text-2xl">
+                    Babies & Toddlers
+                  </p>
                 </div>
                 <div
                   style={{ position: "absolute", left: "10%" }}
@@ -136,12 +150,12 @@ const Homemen = () => {
                 </div>
               </div>
               <div className="relative">
-                <Image src="/logomen3.png" width={700} height={0} />
+                <Image src="/Kids/bannel6.png" width={700} height={0} />
                 <div
                   style={{ position: "absolute", left: "10%" }}
                   className="top-[60%] lg:top-[70%]"
                 >
-                  <p className="text-left text-black text-2xl">Accessories</p>
+                  <p className="text-left text-black text-2xl">Younger Kids</p>
                 </div>
                 <div
                   style={{ position: "absolute", left: "10%" }}
@@ -156,13 +170,7 @@ const Homemen = () => {
           </div>
         </div>
 
-        <div className="mt-20">
-          <CartSlider />
-        </div>
-        <div>
-          <CartSport />
-        </div>
-        <div className="mt-14 mx-auto text-center">
+        <div className=" mx-auto text-center mt-20">
           <HoverExpand />
         </div>
       </div>
@@ -170,4 +178,4 @@ const Homemen = () => {
   );
 };
 
-export default Homemen;
+export default Homekids;

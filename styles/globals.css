@@ -170,3 +170,7 @@
     font-size: 25px;
 }
 
+
+.out-of-stock img {
+    filter: grayscale(100%) brightness(0.3);
+}
