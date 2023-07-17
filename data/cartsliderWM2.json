@@ -1,0 +1,35 @@
+{
+  "Cartslide": [
+    {
+      "title": "Run in Pegasus",
+      "img": "/women/Women1.png"
+    },
+       {
+      "title": "Pegasus Road Running",
+      "img": "/women/Women2.png"
+    },
+       {
+      "title": "Pegasus Trail",
+      "img": "/women/Women3.png"
+    },
+       {
+      "title": "Running Apparel",
+      "img": "/women/Women4.png"
+    },
+       {
+      "title": "Sports Bras",
+      "img": "/women/Women5.png"
+    },
+       {
+      "title": "Running Leggings",
+      "img": "/women/Women6.png"
+    },
+      {
+      "title": "Shoe Finder",
+      "img": "/women/Women7.png"
+    }
+
+     
+    
+  ]
+}

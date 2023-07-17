@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-const CartSliderFinner = ({ women }) => {
+const   CartSliderFinner = ({ women }) => {
   const settings = {
     dots: false,
     infinite: true,

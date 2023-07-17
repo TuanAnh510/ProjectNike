@@ -1,0 +1,30 @@
+{
+  "Cartslide": [
+    {
+      "title": "Air Force 1",
+      "img": "/women/page1.png"
+    },
+       {
+      "title": "Air Max",
+      "img": "/women/page2.png"
+    },
+       {
+      "title": "Jordan",
+      "img": "/women/pag3.png"
+    },
+       {
+      "title": "Metcon",
+      "img": "/women/page4.png"
+    },
+       {
+      "title": "Pegasus",
+      "img": "/women/page5.png"
+    },
+       {
+      "title": "Dunk",
+      "img": "/women/page6.png"
+    }
+     
+    
+  ]
+}

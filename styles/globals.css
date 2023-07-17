@@ -161,6 +161,10 @@
 .card-finnes img{
     width: 500px;
 }
+.card-finnesWM img {
+    width: 400px;
+    height: 300px;
+}
 
 .user_icon {
     font-size: 25px;

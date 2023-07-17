@@ -129,6 +129,12 @@ const Filter = () => {
           </Checkbox>
         </div>
       )}
+
+      <div className="mt-10">
+        <button className="bg-black text-white w-full h-10 rounded-xl hover:bg-[#757575]">
+          Apply
+        </button>
+      </div>
     </div>
   );
 };

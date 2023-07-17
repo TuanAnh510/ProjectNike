@@ -4,9 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import data from "/data/product.json";
-const CartSlider = () => {
-  const [products, setProducts] = useState(data.products);
+import datasl from "/data/cartslider.json";
+import Link from "next/link";
+const CartSliderWM = ({ women }) => {
+  const [productsl, setProductssl] = useState(datasl.Cartslide);
 
   const settings = {
     dots: false,
@@ -14,8 +15,8 @@ const CartSlider = () => {
     // arrows: true,
     fade: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
       {
@@ -55,16 +56,19 @@ const CartSlider = () => {
   return (
     <div>
       <div className="flex justify-between">
-        <div className="text-[25px]">Always Iconic</div>
+        <div className="text-[25px]  ">Shop the Icons</div>
         <div className="pb-5 flex gap-5">
+          <Link href="/Women">
+            <button className="py-2 hover:text-[#b3b3b3] ">Shop</button>
+          </Link>
           <span
-            className="bg-[#e5e5e5] text-white rounded-full hover:bg-[#cccccc] w-10 h-10  cursor-pointer hidden lg:block md:hidden "
+            className="bg-[#e5e5e5] text-white rounded-full hover:bg-[#cccccc] w-10 h-10  cursor-pointer hidden lg:block md:hidden"
             onClick={gotoPrev}
           >
             <AiOutlineLeft color="black" className="mx-auto mt-3" />
           </span>
           <span
-            className="bg-[#e5e5e5] text-white rounded-full hover:bg-[#cccccc] w-10 h-10  cursor-pointer hidden lg:block md:hidden  "
+            className="bg-[#e5e5e5] text-white rounded-full hover:bg-[#cccccc] w-10 h-10  cursor-pointer hidden lg:block md:hidden "
             onClick={gotoNext}
           >
             <AiOutlineRight color="black" className="mx-auto mt-3" />
@@ -72,12 +76,24 @@ const CartSlider = () => {
         </div>
       </div>
 
-      <div className="mt-10 lg:mt-0">
-        <Slider {...settings} ref={sliderRef} className="card">
-          {products?.map((product, index) => (
-            <div key={index}>
-              <img src={product.img} />
-            </div>
+      <div>
+        <Slider
+          {...settings}
+          ref={sliderRef}
+          className="card-finnes h-[550px] md:h-[550px] lg:h-[700px]"
+        >
+          {productsl?.map((Cartslide, index) => (
+            <Link key={index} href="/Women">
+              <div>
+                <img src={Cartslide.img} alt="1" />
+                <div className="mt-4 ">
+                  <p className="text-black font-medium text-xl">
+                    {" "}
+                    {Cartslide.title}
+                  </p>
+                </div>
+              </div>
+            </Link>
           ))}
         </Slider>
       </div>
@@ -85,4 +101,4 @@ const CartSlider = () => {
   );
 };
 
-export default CartSlider;
+export default CartSliderWM;
