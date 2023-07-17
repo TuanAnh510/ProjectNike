@@ -10,9 +10,9 @@ import productsData from "/data/product.json"; // Đường dẫn tới file JSO
 const Cart = ({ women }) => {
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState("right");
-  const [products, setProducts] = useState(productsData.products); // Giới hạn chỉ lấy 5 sản phẩm đầu tiên
+  const [products, setProducts] = useState(productsData.products);
   const [quantity, setQuantity] = useState(0);
-
+  const [productQuantity, setproductQuantity] = useState(products.length);
   const showDrawer = () => {
     setOpen(true);
   };
@@ -29,6 +29,7 @@ const Cart = ({ women }) => {
     const newProducts = [...products];
     newProducts.splice(index, 1);
     setProducts(newProducts);
+    setproductQuantity(newProducts.length);
   };
 
   const handleIncreaseQuantity = () => {
@@ -47,7 +48,10 @@ const Cart = ({ women }) => {
           className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative"
           onClick={showDrawer}
         >
-          <BsCart className="text-[15px] md:text-[20px]" />
+          <BsCart className="text-[15px] md:text-[20px] " />
+          <p className="absolute left-2 bottom-4 lg:left-5 lg:bottom-6 md:left-4 md:bottom-10 bg-red-600 rounded-full w-5 text-white text-xs mx-2">
+            {productQuantity}
+          </p>
         </button>
       </Space>
 
