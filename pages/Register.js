@@ -32,10 +32,19 @@ const Register = () => {
         </div>
         <div>
           <section>
-            <div class="flex flex-col items-center justify-center mx-auto">
-              <div class="w-full md:mt-0 sm:max-w-md xl:p-0 ">
+            <div className="flex flex-col items-center justify-center mx-auto">
+              <div className="w-full md:mt-0 sm:max-w-md xl:p-0 ">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-                  <form class="space-y-4 md:space-y-6" action="#">
+                  <form className="space-y-4 md:space-y-6" action="#">
+                    <div>
+                      <input
+                        type="text"
+                        name="last"
+                        id="last"
+                        placeholder="Name"
+                        className="w-full rounded-lg p-2 border-2 border-[#e5e5e5] placeholder:text-[13px]"
+                      />
+                    </div>
                     <div>
                       <input
                         type="email"
@@ -45,6 +54,7 @@ const Register = () => {
                         placeholder="Email address"
                       />
                     </div>
+
                     <div>
                       <input
                         type="password"
@@ -56,22 +66,23 @@ const Register = () => {
                     </div>
                     <div>
                       <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Re-enter password"
+                        className="w-full rounded-lg p-2 border-2 border-[#e5e5e5] placeholder:text-[13px]"
+                      />
+                    </div>
+                    {/* <div>
+                      <input
                         type="text"
                         name="first"
                         id="first"
                         placeholder="First name"
                         className="w-full rounded-lg p-2 border-2 border-[#e5e5e5] placeholder:text-[13px]"
                       />
-                    </div>
-                    <div>
-                      <input
-                        type="text"
-                        name="last"
-                        id="last"
-                        placeholder="Last name"
-                        className="w-full rounded-lg p-2 border-2 border-[#e5e5e5] placeholder:text-[13px]"
-                      />
-                    </div>
+                    </div> */}
+
                     {/* <div>
                       <Space direction="vertical">
                         <DatePicker
@@ -83,7 +94,7 @@ const Register = () => {
                         Get a Nike Member Reward every year on your Birthday.
                       </p>
                     </div> */}
-                    <div className="grid grid-cols-2 gap-5">
+                    {/* <div className="grid grid-cols-2 gap-5">
                       <div>
                         <div
                           className={`border-2 border-[#e5e5e5] py-2 text-center relative  ${
@@ -123,11 +134,11 @@ const Register = () => {
                           </span>
                         )}
                       </div>
-                    </div>
+                    </div> */}
 
-                    <div class="flex items-center justify-between">
-                      <div class="flex items-start">
-                        <div class="flex items-center h-5">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-start">
+                        <div className="flex items-center h-5">
                           <input
                             id="remember"
                             aria-describedby="remember"
@@ -135,7 +146,7 @@ const Register = () => {
                             className="w-4 h-4"
                           />
                         </div>
-                        <div class="ml-3 text-sm">
+                        <div className="ml-3 text-sm">
                           <label
                             for="remember"
                             className="text-[#8d8d8d] text-[13px]"
@@ -152,7 +163,7 @@ const Register = () => {
                     >
                       JOIN US{" "}
                     </button>
-                    <p class="text-sm font-light text-[#8d8d8d] text-center mx-auto">
+                    <p className="text-sm font-light text-[#8d8d8d] text-center mx-auto">
                       Not a Member?{" "}
                       <Link
                         href="/Login"

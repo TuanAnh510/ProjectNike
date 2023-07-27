@@ -2,16 +2,14 @@ import ProductDetails from "@/components/Slider/ProductDetails";
 import Wrapper from "@/components/Wrapper";
 import { Button } from "antd";
 import Image from "next/image";
-import React from "react";
-import { Collapse, Divider } from "antd";
-
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
-
+import React, { useState } from "react";
+import CartSlider from "@/components/Slider/CartSlider";
 const Category = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleExpanded = () => {
+    setExpanded(!expanded);
+  };
   return (
     <div className="w-full md:py-20">
       <Wrapper>
@@ -73,28 +71,56 @@ const Category = () => {
               </button>
             </div>
 
-            <div className="mt-10">
+            <p className="mt-10 leading-7 ">
               Inspired by the original low-profile tennis shoe, the Nike
               Killshot 2 updates the upper with a variety of textured leathers
               to create a fresh look. From soft suedes to smooth leathers with
               the perfect sheen, it's court-side attitude with a modern touch.
               To prove you're on top, the rubber gum sole adds the cherry on
               bottom.
-            </div>
+            </p>
 
             <div className="pt-10">
-              <div className="w-full bg-[#e5e5e5] h-[2px] mb-5"></div>
-              <Collapse
-                items={[
-                  {
-                    key: "1",
-                    label: "This is default size panel header",
-                    children: <p>{text}</p>,
-                  },
-                ]}
-              />
+              <div className="w-full bg-[#e5e5e5] h-[2px] mb-5">
+                <button
+                  onClick={toggleExpanded}
+                  className="pt-5 flex justify-between gap-32"
+                >
+                  <p className="text-[20px] font-medium ">
+                    Free Delivery and Returns
+                  </p>
+                  <div className={`user_icon ${expanded ? "expanded" : ""}`}>
+                    {expanded ? "-" : "+"}
+                  </div>
+                </button>
+                {expanded && (
+                  <div className="mt-5 text-[16px]">
+                    <p>
+                      {" "}
+                      Đơn hàng của bạn từ 2.000.000 trở lên sẽ được giao hàng
+                      tiêu chuẩn miễn phí.
+                    </p>
+                    ao
+                    <ul className="list-disc ml-5 mt-5">
+                      <li>Tiêu chuẩn giao 1-3 ngày làm việc</li>
+                      <li>Chuyển phát nhanh giao 0-2 ngày làm việc</li>
+                    </ul>
+                    <p className="mt-5">
+                      Đơn đặt hàng được xử lý và giao hàng từ Thứ Hai đến Chủ
+                      Nhật (trừ ngày lễ).
+                    </p>
+                    <p>
+                      Các Thành viên của Nike được hưởng lợi nhuận miễn phí . Áp
+                      dụng loại trừ .
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
+        </div>
+        <div className="mt-40">
+          <CartSlider />
         </div>
       </Wrapper>
     </div>
